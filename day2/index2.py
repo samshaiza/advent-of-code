@@ -14,14 +14,13 @@ for line in txt:
     for e in line.split(";"):
         for b in e.split(','):
             num, color = b.split()
-            if int(num) > {'red': 12, 'green': 13, 'blue': 14}.get(color, 0):
-                good_game = False
+           
             if (color == "green"):
-                green += int(num)
+                green = max(int(num), green)
             elif (color == "red"):
-                red += int(num)
+                red = max(int(num), red)
             elif (color == "blue"):
-                blue += int(num)
+                blue = max(int(num), blue)
     if good_game:
         
         ans2 += (green * red * blue)
