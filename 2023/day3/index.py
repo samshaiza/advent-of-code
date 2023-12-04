@@ -84,4 +84,3 @@ for x, y in gear_locations:
     print(border_gears)
 
 print(ans2)
-
